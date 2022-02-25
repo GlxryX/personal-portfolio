@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+
+  <title>
+    Mihir Balsara | Portfolio
+  </title>
+
+  <meta name="description" content="Add small description of yourslef.">
+  <meta name="keywords" content="html, css, javascript, full stack, mongodb, student developer" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+
+          <span>Mihir Balsara</span>
+        </h1>
+
+        <p>16 year old full stack developer and bot designer</p>
+        <a href="#contact" class="btn btn--red">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- Work Experience -->
+
+    <section class="work" id="work">
+      <div class="row">
+        <h2>My Work</h2>
+        <div class="work__boxes">
+
+          <!-- Each div with the work__box class is a project. -->
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Personal Website</h3>
+              <p>
+                This very website you're on right now was designed and produced by me.
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>SCSS</li>
+                <li>JavaScript</li>
+                <!-- <li>Parcel</li> -->
+              </ul>
+
+              <div class="work__links">
+                <a href="https://www.youtube.com/c/Inceptns" target="_blank" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+                <a href="https://github.com/GlxryX/portfolio" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Omex</h3>
+              <p>
+                A Discord server management and moderation bot packaged with fun commands to spice up your server.
+              </p>
+              <ul class="work__list">
+                <li>Node</li>
+                <li>MongoDB</li>
+                <li>JavaScript</li>
+                <li>discord.js</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://discord.com/api/oauth2/authorize?client_id=874826554960658532&permissions=1101662645254&scope=applications.commands%20bot " target="_blank" class="link__text">
+                  Invite Link <span>&rarr;</span>
+                </a>
+                <a href="https://github.com/GlxryX/Omex" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+
+    <section class="about" id="about">
+      <div class="row">
+        <h2>About Me</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <!-- Replace the below paragraph with info about yourself -->
+            <p>
+              When I'm not coding, I'm either running or with my friends, often toghether 
+              at the same time. As a distance runner doing a 3 season sport, I know how
+              to perservere and enjoy the process. I've found that running is an excellent 
+              way to ease of my mind while also getting a good workout. Everyday is a day to 
+              try a be better than the last one. Being able to share those experiences with
+              others is also a great way to grow and learn. As a self-taught developer, it's
+              I'm always eager to learn new things and improve my skills.
+            </p>
+            <!-- Resume -->
+            <a href="#top" class="btn">My Resume</a>
+          </div>
+
+          <div class="about__photo-container">
+            <!-- Add a nice photo of yourself -->
+            <img class="about__photo" src="./images/mihir-balsara.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact -->
+
+  <section class="contact" id="contact">
+    <div class="row">
+      <h2>Get in Touch</h2>
+      <div class="contact__info">
+        <p>
+          For any furthur inquireies or if you are 
+          in any need of a website or bot developer, feel free to 
+          contact me. I'm always open to new ideas and collaborations
+          so don't be afraid to get in touch.
+        </p>
+        <!-- Replace the email with yours -->
+        <a href="mailto:mihirnbalsara@gmail.com" class="btn">mihirnbalsara@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ***** Footer ***** -->
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://twitter.com/balsara_mihir/" title="Link to Twitter Profile">
+            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://github.com/GlxryX/" title="Link to Github Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+      </ul>
+
+      <p>
+        &copy; 2022 - Developed with love by <a href="this site" class="link">Mihir Balsara</a>.
+      </p>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+  <script src="./index.js"></script>
+</body>
+
+</html>
