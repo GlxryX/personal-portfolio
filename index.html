@@ -22,32 +22,35 @@
 
 <body>
 
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
+<header class="header" role="banner" id="top">
+  <div class="row">
+    <nav class="nav" role="navigation">
+      <ul class="nav__items">
+        <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+        <li class="nav__item">
+          <a href="#about" class="nav__link">About</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact" class="nav__link">Contact</a>
+        </li>
+        <!-- Add the Resume link here -->
+        <li class="nav__item">
+          <a href="./assets/resume.pdf" class="nav__link" target="_blank">Resume</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="header__text-box row">
+    <div class="header__text">
+      <h1 class="heading-primary">
+        <span>Mihir Balsara</span>
+      </h1>
+      <p>Full stack developer and bot designer</p>
+      <a href="#contact" class="btn btn--red">Get in touch</a>
     </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
+  </div>
+</header>
 
-          <span>Mihir Balsara</span>
-        </h1>
-
-        <p>Full stack developer and bot designer</p>
-        <a href="#contact" class="btn btn--red">Get in touch</a>
-      </div>
-    </div>
-  </header>
 
   <main role="main">
 
@@ -119,32 +122,30 @@
         <div class="about__content">
           <div class="about__text">
             <p>
-              When I'm not coding, I'm either running or with my friends, often together 
-              at the same time. As a distance runner doing a 3 season sport, I know how
-              to perservere and enjoy the process. I've found that running is an excellent 
-              way to ease of my mind while also getting a good workout. Every day is a day to 
-              try a be better than the last one. Being able to share those experiences with
-              others is also a great way to grow and learn. As a self-taught developer, it's
-              I'm always eager to learn new things and improve my skills.
+              Experienced computer science developer with a passion for delivering high-quality software solutions.
+              Skilled in multiple programming languages, including Java, Python, and Javascript. Committed to staying
+              current with the latest industry trends and advancements, I am always seeking new challenges and
+              opportunities to grow as a professional.
             </p>
 
-            <a href="#top" class="btn">My Resume</a>
+            <a href="./assets/resume.pdf" class="btn" target="_blank">My Resume</a>
           </div>
 
           <div class="about__photo-container">
-            <img class="about__photo" src="./images/mihir-balsara.jpg" alt="" />
+            <img class="about__photo" src="./images/mihir-balsara.jpeg" alt=""
+                 width="500"
+                 height="500"/>
           </div>
         </div>
       </div>
     </section>
-  </main>
 
   <section class="contact" id="contact">
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
         <p>
-          For any furthur inquireies or if you are 
+          For any further inquiries or if you are
           in any need of a website or bot developer, feel free to 
           contact me. I'm always open to new ideas and collaborations
           so don't be afraid to get in touch.
@@ -170,7 +171,14 @@
       </ul>
 
       <p>
-        &copy; 2023 - Developed with <svg viewBox="0 0 1792 1792" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="height: 1.2rem;"><path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z" fill="#e25555"></path></svg> by <a href="#about" class="nav__link">Mihir Balsara</a>.
+        &copy; 2023 - Developed with <svg viewBox="0 0 1792 1792"
+                                          preserveAspectRatio="xMidYMid meet"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          style="height: 1.2rem;">
+        <path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z"
+              fill="#e25555">
+
+        </path></svg> by <a href="#about" class="nav__link">Mihir Balsara</a>.
       </p>
     </div>
   </footer>

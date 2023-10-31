@@ -550,17 +550,17 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .about__photo-container {
-    margin-bottom: var(--gutter-normal);
+    margin-bottom: var(--gutter-small);
 }
 
 @media(min-width: 901px) {
     .about__text {
-        flex: 0 0 35%;
+        flex: 0 0 60%;
     }
-    
+
     .about__photo-container {
-        flex: 1;
-        margin: 0 var(--gutter-huge) 0 0;
+        flex: 2;
+        margin: 0 var(--gutter-small-1) 0 0;
     }
 }
 
