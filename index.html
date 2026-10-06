@@ -1,192 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-
-  <title>
-    Mihir Balsara | Portfolio
-  </title>
-    <meta content="Mihir Balsara's Personal Website" property="og:title" />
-    <meta content="Full stack developer and bot designer" property="og:description" />
-    <meta content="https://mbalsara.me/" property="og:url" />
-    <meta content="https://i.imgur.com/8ieLbxT.png" property="og:image" />
-    <meta content="#000000" data-react-helmet="true" name="theme-color" />
-  
-  <meta name="description" content="Full stack developer and bot designer">
-  <meta name="keywords" content="html, css, javascript, full stack, mongodb, student developer, mihir balsara, burlington, massachusetts" />
-  <link rel="stylesheet" href="index.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="The personal portfolio of Mihir Balsara.">
+  <title>Mihir Balsara</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
 </head>
-
 <body>
-
-<header class="header" role="banner" id="top">
-  <div class="row">
-    <nav class="nav" role="navigation">
-      <ul class="nav__items">
-        <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-        <li class="nav__item">
-          <a href="#about" class="nav__link">About</a>
-        </li>
-        <li class="nav__item">
-          <a href="#contact" class="nav__link">Contact</a>
-        </li>
-        <!-- Add the Resume link here -->
-        <li class="nav__item">
-          <a href="resume.pdf" class="nav__link" target="_blank">Resume</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div class="header__text-box row">
-    <div class="header__text">
-      <h1 class="heading-primary">
-        <span>Mihir Balsara</span>
-      </h1>
-      <p>Full stack developer and bot designer</p>
-      <a href="#contact" class="btn btn--red">Get in touch</a>
-    </div>
-  </div>
-</header>
-
-
-  <main role="main">
-
-    <section class="experience" id="experience">
-      <div class="row">
-        <h2>Experience</h2>
-        <div class="work__boxes">
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Personal Website</h3>
-              <p>
-                This very website you're on right now was designed and produced by me.
-              </p>
-              <ul class="work__list">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <!-- <li>Parcel</li> -->
-              </ul>
-
-              <div class="work__links">
-                <a href="#top" class="nav__link">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/GlxryX/personal-portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Omex</h3>
-              <p>
-                A Discord server management and moderation bot packaged with fun commands to spice up your server.
-              </p>
-              <ul class="work__list">
-                <li>Node</li>
-                <li>MongoDB</li>
-                <li>JavaScript</li>
-                <li>discord.js</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://discord.com/api/oauth2/authorize?client_id=874826554960658532&permissions=1101662645254&scope=applications.commands%20bot " target="_blank" class="link__text">
-                  Invite Link <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/GlxryX/Omex" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <p>
-              Experienced computer science developer with a passion for delivering high-quality software solutions.
-              Skilled in multiple programming languages, including Java, Python, and Javascript. Committed to staying
-              current with the latest industry trends and advancements, I am always seeking new challenges and
-              opportunities to grow as a professional.
-            </p>
-
-            <a href="resume.pdf" class="btn" target="_blank">My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <img class="about__photo" src="./images/mihir-balsara.jpeg" alt=""
-                 width="500"
-                 height="500"/>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          For any further inquiries or if you are
-          in any need of a website or bot developer, feel free to 
-          contact me. I'm always open to new ideas and collaborations
-          so don't be afraid to get in touch.
-        </p>
-        <a href="mailto:mbalsara3@gatech.edu" class="btn">mbalsara3@gatech.edu</a>
+  <main class="desktop">
+    <div class="name">
+      <div class="intro">
+        <h1>Mihir<br>Balsara</h1>
+        <nav aria-label="Find Mihir online">
+          <a class="mac-button" id="resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="mac-button" id="linkedin" href="https://www.linkedin.com/in/mbalsara/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="mac-button" id="github" href="https://github.com/GlxryX/" target="_blank" rel="noopener">GitHub</a>
+        </nav>
       </div>
     </div>
-  </section>
-
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/m_balsara/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/GlxryX/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-      </ul>
-
-      <p>
-        &copy; 2023 - Developed with <svg viewBox="0 0 1792 1792"
-                                          preserveAspectRatio="xMidYMid meet"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          style="height: 1.2rem;">
-        <path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z"
-              fill="#e25555">
-
-        </path></svg> by <a href="#about" class="nav__link">Mihir Balsara</a>.
-      </p>
-    </div>
-  </footer>
-
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
-  <script src="./index.js"></script>
+    <footer>
+      <div class="footer-meta">
+        <p class="copyright">Copyright © 2026 Mihir Balsara. All rights reserved.</p>
+        <time id="clock" aria-label="Current local date and time"></time>
+      </div>
+    </footer>
+  </main>
 </body>
-
 </html>
