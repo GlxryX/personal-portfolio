@@ -13,3 +13,5 @@ The Resume button opens `resume.pdf`, the Oracle version of the résumé. Linked
 Original reference: https://web.archive.org/web/20010601020717/http://www.apple.com/ (including its glossy Search button and compact Geneva footer).
 
 Apple Garamond Light is bundled in `fonts/AppleGaramond-Light.ttf`.
+
+The vintage MB monogram is drawn with JavaScript Canvas in `logo.js`. Its standalone SVG is `images/logo.svg`, with outlined letterforms that need no external font. `images/favicon.png` provides a PNG fallback. To regenerate the SVG: `node -e 'require("fs").writeFileSync("images/logo.svg", require("./logo.js").svg)'`.
