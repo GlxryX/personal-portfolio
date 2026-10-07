@@ -8,13 +8,12 @@
 }
 :root { color-scheme: light; --paper: #ffffff; --ink: #202020; }
 * { box-sizing: border-box; }
-html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: none; }
 html { background: var(--paper); }
-body { position: fixed; inset: 0; margin: 0; color: var(--ink); }
-.desktop { height: 100vh; height: 100dvh; display: flex; flex-direction: column; width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 48px; }
+body { margin: 0; color: var(--ink); }
+.desktop { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 48px; }
 #clock, .copyright { font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 1.5; color: #6b6a65; }
 #clock { font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
-.name { flex: 1; min-height: 0; display: flex; align-items: center; padding: 24px 0; }
+.name { flex: 1; display: flex; align-items: center; padding: 24px 0; }
 h1 { margin: 0; width: min-content; max-width: 100%; font-family: 'Apple Garamond Local', 'Apple Garamond', 'ITC Garamond', Baskerville, 'Palatino Linotype', 'Times New Roman', serif; font-style: normal; font-weight: 400; font-size: clamp(48px, min(11vw, 20vh), 148px); line-height: .94; letter-spacing: -.025em; }
 .intro { width: 100%; }
 footer { flex-shrink: 0; padding: 16px 0 max(28px, env(safe-area-inset-bottom)); }
