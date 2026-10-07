@@ -7,7 +7,23 @@ const clockFormatter = new Intl.DateTimeFormat('en-US', {
 function updateClock() {
   const now = new Date();
   const parts = Object.fromEntries(clockFormatter.formatToParts(now).map(part => [part.type, part.value]));
-  clock.textContent = `${parts.month} ${parts.day}, ${parts.year} ${parts.hour}:${parts.minute} ${parts.dayPeriod} ${parts.timeZoneName}`;
+  const display = `${parts.month} ${parts.day}, ${parts.year} ${parts.hour}:${parts.minute} ${parts.dayPeriod} ${parts.timeZoneName}`;
+  if (clock.textContent !== display) {
+    const text = clock.firstChild || clock.appendChild(document.createTextNode(''));
+    const selection = window.getSelection();
+    const saved = selection && (selection.anchorNode === text || selection.focusNode === text)
+      ? {anchor: selection.anchorNode, anchorOffset: selection.anchorOffset,
+         focus: selection.focusNode, focusOffset: selection.focusOffset}
+      : null;
+    const oldLength = text.length;
+    text.replaceData(0, oldLength, display);
+    if (saved) {
+      const offset = (node, value) => node !== text ? value
+        : value === oldLength ? text.length : Math.min(value, text.length);
+      selection.setBaseAndExtent(saved.anchor, offset(saved.anchor, saved.anchorOffset),
+        saved.focus, offset(saved.focus, saved.focusOffset));
+    }
+  }
   clock.dateTime = now.toISOString();
 }
 updateClock();
