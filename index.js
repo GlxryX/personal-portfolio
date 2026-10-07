@@ -15,3 +15,14 @@ setInterval(updateClock, 1000);
 document.addEventListener('visibilitychange', () => {
   if (!document.hidden) updateClock();
 });
+
+const contactDialog = document.querySelector('#contact-dialog');
+document.querySelector('#contact').addEventListener('click', () => contactDialog.showModal());
+contactDialog.addEventListener('click', (event) => {
+  const bounds = contactDialog.getBoundingClientRect();
+  if (event.target === contactDialog &&
+      (event.clientX < bounds.left || event.clientX > bounds.right ||
+       event.clientY < bounds.top || event.clientY > bounds.bottom)) {
+    contactDialog.close();
+  }
+});

@@ -20,6 +20,7 @@
           <a class="mac-button" id="resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
           <a class="mac-button" id="linkedin" href="https://www.linkedin.com/in/mbalsara/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="mac-button" id="github" href="https://github.com/GlxryX/" target="_blank" rel="noopener">GitHub</a>
+          <button class="mac-button" id="contact" type="button" aria-haspopup="dialog" aria-controls="contact-dialog">Contact</button>
         </nav>
       </div>
     </div>
@@ -30,5 +31,21 @@
       </div>
     </footer>
   </main>
+  <dialog id="contact-dialog" aria-labelledby="contact-title" aria-describedby="contact-description">
+    <div class="contact-titlebar">
+      <form method="dialog" class="window-controls">
+        <button class="window-dot close-window" type="submit" aria-label="Close contact window"><span aria-hidden="true">×</span></button>
+        <span class="window-dot minimize-window" aria-hidden="true"></span>
+        <span class="window-dot zoom-window" aria-hidden="true"></span>
+      </form>
+      <h2 id="contact-title">Contact</h2>
+    </div>
+    <div class="contact-content">
+      <p id="contact-description">Contact me at the email listed in my <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>.</p>
+      <div class="contact-actions">
+        <a class="mac-button" href="mailto:">Open Mail</a>
+      </div>
+    </div>
+  </dialog>
 </body>
 </html>
