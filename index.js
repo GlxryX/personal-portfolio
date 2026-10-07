@@ -17,7 +17,10 @@ document.addEventListener('visibilitychange', () => {
 });
 
 const contactDialog = document.querySelector('#contact-dialog');
-document.querySelector('#contact').addEventListener('click', () => contactDialog.showModal());
+document.querySelector('#contact').addEventListener('click', () => {
+  ['left', 'top', 'inset', 'margin', 'position'].forEach(property => contactDialog.style.removeProperty(property));
+  contactDialog.showModal();
+});
 contactDialog.addEventListener('click', (event) => {
   const bounds = contactDialog.getBoundingClientRect();
   if (event.target === contactDialog &&
@@ -26,3 +29,32 @@ contactDialog.addEventListener('click', (event) => {
     contactDialog.close();
   }
 });
+
+const contactTitlebar = document.querySelector('.contact-titlebar');
+let drag = null;
+function positionContact(left, top) {
+  contactDialog.style.position = 'fixed';
+  contactDialog.style.inset = 'auto';
+  contactDialog.style.margin = '0';
+  contactDialog.style.left = `${left}px`;
+  contactDialog.style.top = `${top}px`;
+}
+contactTitlebar.addEventListener('pointerdown', (event) => {
+  if (event.button !== 0 || !event.isPrimary || event.target.closest('.window-controls')) return;
+  const bounds = contactDialog.getBoundingClientRect();
+  drag = {pointerId: event.pointerId, x: event.clientX - bounds.left, y: event.clientY - bounds.top};
+  contactTitlebar.setPointerCapture(event.pointerId);
+  event.preventDefault();
+});
+contactTitlebar.addEventListener('pointermove', (event) => {
+  if (!drag || event.pointerId !== drag.pointerId) return;
+  positionContact(event.clientX - drag.x, event.clientY - drag.y);
+});
+function endContactDrag() {
+  if (drag && contactTitlebar.hasPointerCapture(drag.pointerId)) contactTitlebar.releasePointerCapture(drag.pointerId);
+  drag = null;
+}
+contactTitlebar.addEventListener('pointerup', endContactDrag);
+contactTitlebar.addEventListener('pointercancel', endContactDrag);
+contactTitlebar.addEventListener('lostpointercapture', endContactDrag);
+contactDialog.addEventListener('close', endContactDrag);
