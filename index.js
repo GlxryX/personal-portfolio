@@ -1,15 +1,13 @@
 // Match the original Apple timestamp style in the visitor's device timezone.
 const clock = document.querySelector('#clock');
+const copyrightYear = document.querySelector('#copyright-year');
 const clockFormatter = new Intl.DateTimeFormat('en-US', {
   month: 'long', day: 'numeric', year: 'numeric',
   hour: 'numeric', minute: '2-digit', hour12: true, timeZoneName: 'short'
 });
-function updateClock() {
-  const now = new Date();
-  const parts = Object.fromEntries(clockFormatter.formatToParts(now).map(part => [part.type, part.value]));
-  const display = `${parts.month} ${parts.day}, ${parts.year} ${parts.hour}:${parts.minute} ${parts.dayPeriod} ${parts.timeZoneName}`;
-  if (clock.textContent !== display) {
-    const text = clock.firstChild || clock.appendChild(document.createTextNode(''));
+function updateTextPreservingSelection(element, display) {
+  if (element.textContent !== display) {
+    const text = element.firstChild || element.appendChild(document.createTextNode(''));
     const selection = window.getSelection();
     const saved = selection && (selection.anchorNode === text || selection.focusNode === text)
       ? {anchor: selection.anchorNode, anchorOffset: selection.anchorOffset,
@@ -24,6 +22,13 @@ function updateClock() {
         saved.focus, offset(saved.focus, saved.focusOffset));
     }
   }
+}
+function updateClock() {
+  const now = new Date();
+  updateTextPreservingSelection(copyrightYear, String(now.getFullYear()));
+  const parts = Object.fromEntries(clockFormatter.formatToParts(now).map(part => [part.type, part.value]));
+  const display = `${parts.month} ${parts.day}, ${parts.year} ${parts.hour}:${parts.minute} ${parts.dayPeriod} ${parts.timeZoneName}`;
+  updateTextPreservingSelection(clock, display);
   clock.dateTime = now.toISOString();
 }
 updateClock();
